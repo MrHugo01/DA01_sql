@@ -16,3 +16,10 @@ SELECT DISTINCT CITY FROM STATION WHERE CITY NOT LIKE 'A%' AND CITY NOT LIKE 'E%
 --batap7
 SELECT NAME FROM EMPLOYEE ORDER BY NAME ASC;
 --baitap8
+select name from employee where salary >2000 and months <10
+--baitap9
+select product_id from products
+where low_fats = 'y' and recyclable = 'y'
+--baitap10
+SELECT name FROM customer WHERE referee_id != 2 OR referee_id IS NULL;
+--baitap11
