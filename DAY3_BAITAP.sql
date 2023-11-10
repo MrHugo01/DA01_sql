@@ -23,3 +23,17 @@ where low_fats = 'y' and recyclable = 'y'
 --baitap10
 SELECT name FROM customer WHERE referee_id != 2 OR referee_id IS NULL;
 --baitap11
+select name, population, area from world 
+where area >= 3000000 or population >= 25000000
+--baitap12
+select distinct author_id as id from views
+where viewer_id = author_id 
+order by id asc
+--baitap13
+SELECT PART, assembly_step FROM PARTS_ASSEMBLY 
+WHERE FINISH_DATE IS NULL
+--baitap14
+select * from lyft_drivers WHERE yearly_salary NOT BETWEEN 30001 AND 69999
+--baitap15
+select advertising_channel  from uber_advertising
+where money_spent > 100000 and year = 2019
