@@ -37,3 +37,20 @@ select * from lyft_drivers WHERE yearly_salary NOT BETWEEN 30001 AND 69999
 --baitap15
 select advertising_channel  from uber_advertising
 where money_spent > 100000 and year = 2019
+--having challeng (bai4) 
+select customer_id, date(payment_date),
+avg(amount),
+count(payment_id)
+from payment 
+where date(payment_date) in ('2020-04-28', '2020-04-29','2020-04-30')
+group by customer_id, date(payment_date)
+having count(payment_id)>1
+order by avg(amount) desc
+--Mathematics operations & functions Challenge(bai4)
+select 
+film_id,
+replacement_cost,
+rental_rate,
+round((rental_rate/replacement_cost)*100,2) as percentage 
+from film 
+where round((rental_rate/replacement_cost)*100,2)<4
